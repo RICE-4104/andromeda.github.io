@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Click Counter(gonemi)</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding-top: 50px; background-color: #f4f4f9; }
+    .counter-box { font-size: 3rem; font-weight: bold; margin-bottom: 20px; color: #333; }
+    .click-btn { padding: 15px 30px; font-size: 1.2rem; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <h1>Clicker Counter(made with goonemi)</h1>
+  <div class="counter-box" id="countDisplay">0</div>
+  <button class="click-btn" id="clickBtn">Click Me!</button>
+
+  <script>
+    const display = document.getElementById("countDisplay");
+    const button = document.getElementById("clickBtn");
+
+    // 1. Get saved clicks from browser memory, or start at 0
+    let clicks = localStorage.getItem("my_clicks") ? parseInt(localStorage.getItem("my_clicks")) : 0;
+    display.innerText = clicks;
+
+    // 2. Increase and save on every click
+    button.addEventListener("click", () => {
+      clicks++;
+      display.innerText = clicks;
+      localStorage.setItem("my_clicks", clicks);
+    });
+  </script>
+
+</body>
+</html>

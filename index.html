@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>d</title>
+
+    <script>
+        // The exact list of titles you requested
+        const titles = [
+            "d", "dy", "dyi", "dyin", "dying", 
+            "dying s", "dying st", "dying sta", "dying star", 
+            "..", 
+            "a", "an", "and", "andr", "andro", "androm", "androme", "andromed", "andromeda"
+        ];
+
+        let currentIndex = 0;
+
+        // Change the title every 200 milliseconds (0.2 seconds)
+        setInterval(() => {
+            document.title = titles[currentIndex];
+            currentIndex = (currentIndex + 1) % titles.length;
+        }, 200);
+    </script>
+</head>
+<body>
+<link rel="stylesheet" href ="dark blue.css">
+<h1>Space, Moon And Stars.</h1>
+<h2>Mueu Menu meann maennx4.</h2>
+<p>i dont really know what to use this website for</p>
+<span class="red-text"> (scroll down)</span>
+<video src="connerquest.mp4" type="video/mp4" width="500" height="267" autoplay muted loop></video>
+<a href="The-About-Me.html" class="button-link">About me Since im not using this website for anything like about me</a>
+<img id="eyeImage" src="cube open eye.png" onclick="toggleEye()" alt="Eye Status" style="cursor: pointer; width: 200px;">
+
+<script>
+function toggleEye() {
+  const eye = document.getElementById('eyeImage');
+  const currentSrc = decodeURIComponent(eye.src);
+  
+  if (currentSrc.endsWith("cube open eye.png")) {
+    eye.src = "cube close eye.png";
+  } else {
+    eye.src = "cube open eye.png";
+  }
+}
+</script>
+<h2>i dont know what to put here</h2>
+<p>Tell Me Right Now What To Put Here!!!</p>
+<a href="thing.html" class="button-link">click here</a>
+</body>
+</html>
